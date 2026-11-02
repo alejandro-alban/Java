@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Area_Perimetro_Rectangulo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double largo, ancho, area, perimetro;
+
+        System.out.print("Ingrese el largo: ");
+        largo = sc.nextDouble();
+
+        System.out.print("Ingrese el ancho: ");
+        ancho = sc.nextDouble();
+
+        area = largo * ancho;
+        perimetro = 2 * (largo + ancho);
+
+        System.out.println("El area es: " + area);
+        System.out.println("El perimetro es: " + perimetro);
+
+        sc.close();
+    }
+}
