@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Conversion_Dolares_Pesos {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double dolares, cambio, pesos;
+
+        System.out.print("Ingrese la cantidad en dolares: ");
+        dolares = sc.nextDouble();
+
+        System.out.print("Ingrese el tipo de cambio: ");
+        cambio = sc.nextDouble();
+
+        pesos = dolares * cambio;
+
+        System.out.println("La cantidad en pesos mexicanos es: " + pesos);
+
+        sc.close();
+    }
+}
