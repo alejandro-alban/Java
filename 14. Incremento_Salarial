@@ -1,0 +1,13 @@
+public class Incremento_Salarial {
+    public static void main(String[] args) {
+
+        double salario = 1500;
+
+        for (int anio = 1; anio <= 6; anio++) {
+            salario = salario * 1.10;
+            System.out.println("Salario del año " + anio + ": $" + salario);
+        }
+
+        System.out.println("Salario final: $" + salario);
+    }
+}
