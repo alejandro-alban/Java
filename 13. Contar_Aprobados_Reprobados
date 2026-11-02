@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Contar_Aprobados_Reprobados {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n, aprobados = 0, reprobados = 0;
+        double nota;
+
+        System.out.print("Ingrese la cantidad de estudiantes: ");
+        n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print("Ingrese la nota del estudiante: ");
+            nota = sc.nextDouble();
+
+            if (nota >= 7) {
+                aprobados++;
+            } else {
+                reprobados++;
+            }
+        }
+
+        System.out.println("Cantidad de aprobados: " + aprobados);
+        System.out.println("Cantidad de reprobados: " + reprobados);
+
+        sc.close();
+    }
+}
