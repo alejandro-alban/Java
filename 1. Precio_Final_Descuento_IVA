@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Precio_Final_Descuento_IVA {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double precio, descuento, precioDescuento, iva, precioFinal;
+
+        System.out.print("Ingrese el precio original: ");
+        precio = sc.nextDouble();
+
+        descuento = precio * 0.20;
+        precioDescuento = precio - descuento;
+
+        iva = precioDescuento * 0.15;
+        precioFinal = precioDescuento + iva;
+
+        System.out.println("Precio con descuento: " + precioDescuento);
+        System.out.println("Precio final con IVA: " + precioFinal);
+
+        sc.close();
+    }
+}
