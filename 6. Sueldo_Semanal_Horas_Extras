@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Sueldo_Semanal_Horas_Extras {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double horas, tarifa, sueldo;
+
+        System.out.print("Ingrese las horas trabajadas: ");
+        horas = sc.nextDouble();
+
+        System.out.print("Ingrese el pago por hora: ");
+        tarifa = sc.nextDouble();
+
+        if (horas <= 40) {
+            sueldo = horas * tarifa;
+        } else {
+            sueldo = (40 * tarifa) + ((horas - 40) * tarifa * 2);
+        }
+
+        System.out.println("El sueldo semanal es: $" + sueldo);
+
+        sc.close();
+    }
+}
