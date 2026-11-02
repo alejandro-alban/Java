@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Aprobacion_Asignatura {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double promedio;
+
+        System.out.print("Ingrese el promedio final: ");
+        promedio = sc.nextDouble();
+
+        if (promedio >= 7) {
+            System.out.println("APRUEBA");
+        } else {
+            System.out.println("NO APRUEBA");
+        }
+
+        sc.close();
+    }
+}
