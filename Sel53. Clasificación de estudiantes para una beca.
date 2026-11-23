@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class ClasificacionDeEstudiantesParaUnaBeca {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        double promedio;
+        int reprobadas, beca;
+        String primerCiclo;
+
+        System.out.print("Ingrese el promedio: ");
+        promedio = entrada.nextDouble();
+
+        System.out.print("Ingrese el número de materias reprobadas: ");
+        reprobadas = entrada.nextInt();
+
+        System.out.print("¿Es estudiante de primer ciclo? (S/N): ");
+        primerCiclo = entrada.next().toUpperCase();
+
+        if (promedio >= 9.0 && reprobadas == 0 && primerCiclo.equals("S")) {
+            beca = 100;
+        } else if (promedio >= 8.0 && reprobadas <= 1) {
+            beca = 70;
+        } else if (promedio >= 7.0 && reprobadas <= 2) {
+            beca = 40;
+        } else {
+            beca = 0;
+        }
+
+        System.out.println("Porcentaje de beca: " + beca + "%");
+
+        if (beca > 0) {
+            System.out.println("Solicitud aprobada");
+        } else {
+            System.out.println("Solicitud rechazada");
+        }
+
+        entrada.close();
+    }
+}
