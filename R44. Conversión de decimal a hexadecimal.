@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ConversionDeDecimalAHexadecimal {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int numero, n, residuo;
+        String hexadecimal = "";
+        String digitos = "0123456789ABCDEF";
+
+        System.out.print("Ingrese un número decimal: ");
+        numero = sc.nextInt();
+
+        n = numero;
+
+        if (n == 0) {
+            hexadecimal = "0";
+        } else {
+            while (n > 0) {
+                residuo = n % 16;
+                hexadecimal = digitos.charAt(residuo) + hexadecimal;
+                n = n / 16;
+            }
+        }
+
+        System.out.println("Número hexadecimal: " + hexadecimal);
+    }
+}
