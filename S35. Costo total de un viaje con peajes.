@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class CostoTotalDeUnViajeConPeajes {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double distancia, consumo, precio, costo;
+        double costoPeaje = 0, litros, costoCombustible, total;
+        int peajes;
+
+        System.out.print("Ingrese la distancia (km): ");
+        distancia = sc.nextDouble();
+
+        System.out.print("Ingrese el consumo (km/l): ");
+        consumo = sc.nextDouble();
+
+        System.out.print("Ingrese el precio del combustible: ");
+        precio = sc.nextDouble();
+
+        System.out.print("Ingrese el número de peajes: ");
+        peajes = sc.nextInt();
+
+        for (int i = 1; i <= peajes; i++) {
+            System.out.print("Ingrese el costo del peaje: ");
+            costo = sc.nextDouble();
+            costoPeaje += costo;
+        }
+
+        litros = distancia / consumo;
+        costoCombustible = litros * precio;
+        total = costoCombustible + costoPeaje;
+
+        System.out.println("Litros necesarios: " + litros);
+        System.out.println("Costo de combustible: " + costoCombustible);
+        System.out.println("Costo de peajes: " + costoPeaje);
+        System.out.println("Costo total: " + total);
+    }
+}
