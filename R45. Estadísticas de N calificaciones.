@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class EstadisticasDeNCalificaciones {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n, aprobados = 0, reprobados = 0;
+        double nota, suma = 0, promedio;
+        double mayor = 0, menor = 10;
+
+        System.out.print("Ingrese la cantidad de calificaciones: ");
+        n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print("Ingrese la calificación: ");
+            nota = sc.nextDouble();
+
+            suma = suma + nota;
+
+            if (nota > mayor) {
+                mayor = nota;
+            }
+
+            if (nota < menor) {
+                menor = nota;
+            }
+
+            if (nota >= 7) {
+                aprobados++;
+            } else {
+                reprobados++;
+            }
+        }
+
+        promedio = suma / n;
+
+        System.out.println("Promedio: " + promedio);
+        System.out.println("Calificación mayor: " + mayor);
+        System.out.println("Calificación menor: " + menor);
+        System.out.println("Aprobados: " + aprobados);
+        System.out.println("Reprobados: " + reprobados);
+    }
+}
