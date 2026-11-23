@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class MaximoComunDivisorEuclides {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a, b, residuo;
+
+        System.out.print("Ingrese el primer número: ");
+        a = sc.nextInt();
+
+        System.out.print("Ingrese el segundo número: ");
+        b = sc.nextInt();
+
+        while (b != 0) {
+            residuo = a % b;
+            a = b;
+            b = residuo;
+        }
+
+        System.out.println("MCD: " + a);
+    }
+}
