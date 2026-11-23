@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class BonoPorProductividad {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double sueldo, productividad, porcentaje, bono, total;
+
+        System.out.print("Ingrese el sueldo base: ");
+        sueldo = sc.nextDouble();
+
+        System.out.print("Ingrese la productividad: ");
+        productividad = sc.nextDouble();
+
+        if (productividad >= 90) {
+            porcentaje = 0.20;
+        } else if (productividad >= 70) {
+            porcentaje = 0.10;
+        } else if (productividad >= 50) {
+            porcentaje = 0.05;
+        } else {
+            porcentaje = 0;
+        }
+
+        bono = sueldo * porcentaje;
+        total = sueldo + bono;
+
+        System.out.println("Bono: " + bono);
+        System.out.println("Total a pagar: " + total);
+    }
+}
