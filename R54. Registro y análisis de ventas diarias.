@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class RegistroYAnalisisDeVentasDiarias {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        double venta, total = 0, promedio, mayor = 0;
+        int dias = 0, superiores = 0, diaMayor = 0;
+
+        while (true) {
+            System.out.print("Ingrese la venta del día (-1 para terminar): ");
+            venta = entrada.nextDouble();
+
+            if (venta == -1) {
+                break;
+            }
+
+            dias++;
+            total += venta;
+
+            if (venta > 500) {
+                superiores++;
+            }
+
+            if (dias == 1 || venta > mayor) {
+                mayor = venta;
+                diaMayor = dias;
+            }
+        }
+
+        if (dias > 0) {
+            promedio = total / dias;
+
+            System.out.println("Total de ventas: " + total);
+            System.out.println("Promedio de ventas: " + promedio);
+            System.out.println("Días con ventas superiores a $500: " + superiores);
+            System.out.println("Mayor venta: " + mayor);
+            System.out.println("Día de la mayor venta: " + diaMayor);
+        } else {
+            System.out.println("No se ingresaron ventas.");
+        }
+
+        entrada.close();
+    }
+}
