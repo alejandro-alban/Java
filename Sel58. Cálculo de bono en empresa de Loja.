@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class CalculoDeBono {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int antiguedad;
+        double sueldo, bono = 0, total;
+        String excelente;
+
+        System.out.print("Ingrese los años de antigüedad: ");
+        antiguedad = entrada.nextInt();
+
+        System.out.print("Ingrese el sueldo: ");
+        sueldo = entrada.nextDouble();
+
+        System.out.print("¿Tiene evaluación excelente? (S/N): ");
+        excelente = entrada.next().toUpperCase();
+
+        if (antiguedad > 2) {
+            bono = sueldo * 0.10;
+            if (excelente.equals("S")) {
+                bono += sueldo * 0.05;
+            }
+        } else {
+            if (antiguedad < 2) {
+                if (excelente.equals("S")) {
+                    bono = sueldo * 0.05;
+                }
+            }
+        }
+
+        total = sueldo + bono;
+
+        System.out.println("Valor del bono: " + bono);
+        System.out.println("Sueldo total: " + total);
+
+        entrada.close();
+    }
+}
