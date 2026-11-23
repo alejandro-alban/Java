@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Costo de envío con peso volumétrico {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double pesoReal, largo, ancho, alto;
+        double pesoVolumetrico, pesoCobrar, costo;
+
+        System.out.print("Ingrese el peso real: ");
+        pesoReal = sc.nextDouble();
+
+        System.out.print("Ingrese el largo: ");
+        largo = sc.nextDouble();
+
+        System.out.print("Ingrese el ancho: ");
+        ancho = sc.nextDouble();
+
+        System.out.print("Ingrese el alto: ");
+        alto = sc.nextDouble();
+
+        pesoVolumetrico = (largo * ancho * alto) / 5000;
+        pesoCobrar = Math.max(pesoReal, pesoVolumetrico);
+        costo = pesoCobrar * 2.50;
+
+        System.out.println("Peso volumétrico: " + pesoVolumetrico);
+        System.out.println("Peso a cobrar: " + pesoCobrar);
+        System.out.println("Costo total: " + costo);
+    }
+}
