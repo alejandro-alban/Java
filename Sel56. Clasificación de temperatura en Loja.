@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ClasificacionDeTemperatura {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        double temperatura;
+
+        System.out.print("Ingrese la temperatura: ");
+        temperatura = entrada.nextDouble();
+
+        if (temperatura < 15) {
+            System.out.println("Clasificación: Frío");
+        } else {
+            if (temperatura <= 25) {
+                System.out.println("Clasificación: Templado");
+            } else {
+                System.out.println("Clasificación: Cálido");
+
+                if (temperatura > 30) {
+                    System.out.println("Alerta: Calor extremo");
+                }
+            }
+        }
+
+        entrada.close();
+    }
+}
