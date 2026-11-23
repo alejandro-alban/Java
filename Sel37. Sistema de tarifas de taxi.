@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class SistemaDeTarifasDeTaxi {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double km, total;
+        String noche;
+
+        System.out.print("Ingrese los kilómetros recorridos: ");
+        km = sc.nextDouble();
+
+        System.out.print("¿Es de noche? (S/N): ");
+        noche = sc.next().toUpperCase();
+
+        total = 2 + (1.50 * km);
+
+        if (km > 10) {
+            total = total * 1.20;
+        }
+
+        if (noche.equals("S")) {
+            total = total * 1.30;
+        }
+
+        System.out.println("Total a pagar: $" + total);
+    }
+}
