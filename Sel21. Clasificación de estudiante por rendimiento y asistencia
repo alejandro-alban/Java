@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ClasificacionDeEstudiantePorRendimientoYAsistencia {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double promedio, asistencia;
+        String categoria;
+
+        System.out.print("Ingrese el promedio: ");
+        promedio = sc.nextDouble();
+
+        System.out.print("Ingrese el porcentaje de asistencia: ");
+        asistencia = sc.nextDouble();
+
+        if (promedio >= 9 && asistencia >= 90) {
+            categoria = "Excelente";
+        } else if (promedio >= 7 && asistencia >= 80) {
+            categoria = "Bueno";
+        } else if (promedio >= 6 && asistencia >= 70) {
+            categoria = "Regular";
+        } else {
+            categoria = "Deficiente";
+        }
+
+        System.out.println("Categoría: " + categoria);
+    }
+}
