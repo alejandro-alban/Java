@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class DescuentoPorVolumenYClienteFrecuente {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double monto, descuento, total;
+        String cliente;
+
+        System.out.print("Ingrese el monto de compra: ");
+        monto = sc.nextDouble();
+
+        System.out.print("¿Es cliente frecuente? (S/N): ");
+        cliente = sc.next();
+
+        if (monto >= 500) {
+            descuento = 15;
+        } else if (monto >= 300) {
+            descuento = 10;
+        } else if (monto >= 100) {
+            descuento = 5;
+        } else {
+            descuento = 0;
+        }
+
+        if (cliente.equalsIgnoreCase("S")) {
+            descuento = descuento + 5;
+        }
+
+        total = monto - (monto * descuento / 100);
+
+        System.out.println("Descuento aplicado: " + descuento + "%");
+        System.out.println("Total a pagar: " + total);
+    }
+}
