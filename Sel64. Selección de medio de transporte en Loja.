@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class SeleccionDeMedioDeTransporte {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int opcion;
+
+        System.out.println("MEDIOS DE TRANSPORTE");
+        System.out.println("1. Bus urbano");
+        System.out.println("2. Taxi");
+        System.out.println("3. Bicicleta");
+        System.out.println("4. Caminar");
+
+        System.out.print("Seleccione un medio de transporte: ");
+        opcion = entrada.nextInt();
+
+        switch (opcion) {
+            case 1:
+                System.out.println("Tiempo estimado: 20 minutos");
+                System.out.println("Transporte público");
+                break;
+            case 2:
+                System.out.println("Tiempo estimado: 12 minutos");
+                System.out.println("Transporte rápido");
+                break;
+            case 3:
+                System.out.println("Tiempo estimado: 25 minutos");
+                System.out.println("Transporte ecológico");
+                break;
+            case 4:
+                System.out.println("Tiempo estimado: 60 minutos");
+                System.out.println("Actividad saludable");
+                break;
+            default:
+                System.out.println("Opción inválida");
+        }
+
+        entrada.close();
+    }
+}
