@@ -1,0 +1,9 @@
+D = float(input("Ingrese el depósito mensual: "))
+i = float(input("Ingrese la tasa mensual: "))
+n = int(input("Ingrese el número de meses: "))
+
+  total = D * n
+  VF = D * (((1 + i) ** n - 1) / i)
+
+print("Total depositado:", total)
+print("Valor futuro:", VF)
