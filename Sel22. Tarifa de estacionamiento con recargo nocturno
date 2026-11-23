@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class TarifaDeEstacionamientoConRecargoNocturno {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double horas, total;
+        String nocturno;
+
+        System.out.print("Ingrese las horas: ");
+        horas = sc.nextDouble();
+
+        System.out.print("¿Es horario nocturno? (S/N): ");
+        nocturno = sc.next();
+
+        total = horas * 1.50;
+
+        if (horas > 8) {
+            total = total * 1.25;
+        }
+
+        if (nocturno.equalsIgnoreCase("S")) {
+            total = total * 1.30;
+        }
+
+        System.out.println("Total a pagar: " + total);
+    }
+}
