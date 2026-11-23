@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class DiaDeLaSemanaYActividad {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int dia;
+
+        System.out.print("Ingrese un número del 1 al 7: ");
+        dia = entrada.nextInt();
+
+        switch (dia) {
+            case 1:
+                System.out.println("Día: Lunes");
+                System.out.println("Día de clases");
+                break;
+            case 2:
+                System.out.println("Día: Martes");
+                System.out.println("Día de clases");
+                break;
+            case 3:
+                System.out.println("Día: Miércoles");
+                System.out.println("Día de clases");
+                break;
+            case 4:
+                System.out.println("Día: Jueves");
+                System.out.println("Día de clases");
+                break;
+            case 5:
+                System.out.println("Día: Viernes");
+                System.out.println("Día de clases");
+                break;
+            case 6:
+                System.out.println("Día: Sábado");
+                System.out.println("Fin de semana");
+                break;
+            case 7:
+                System.out.println("Día: Domingo");
+                System.out.println("Fin de semana");
+                break;
+            default:
+                System.out.println("Número inválido");
+        }
+
+        entrada.close();
+    }
+}
