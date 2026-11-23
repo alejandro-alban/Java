@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class CalculoDeEnergiaElectrica {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double potencia, horas, tarifa, consumo, costo;
+
+        System.out.print("Ingrese la potencia (W): ");
+        potencia = sc.nextDouble();
+
+        System.out.print("Ingrese las horas de uso diario: ");
+        horas = sc.nextDouble();
+
+        System.out.print("Ingrese la tarifa por kWh: ");
+        tarifa = sc.nextDouble();
+
+        consumo = (potencia / 1000) * horas * 30;
+        costo = consumo * tarifa;
+
+        System.out.println("Consumo mensual: " + consumo + " kWh");
+        System.out.println("Costo total: $" + costo);
+    }
+}
