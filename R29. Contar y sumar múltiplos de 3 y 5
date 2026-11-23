@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ContarYSumarMultiplosDe3Y5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int N, cantidad = 0, suma = 0;
+
+        System.out.print("Ingrese N: ");
+        N = sc.nextInt();
+
+        for (int i = 1; i <= N; i++) {
+            if (i % 3 == 0 || i % 5 == 0) {
+                cantidad++;
+                suma = suma + i;
+            }
+        }
+
+        System.out.println("Cantidad de múltiplos: " + cantidad);
+        System.out.println("Suma de múltiplos: " + suma);
+    }
+}
