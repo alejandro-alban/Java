@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class DeterminacionDeCuadrante {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double x, y;
+
+        System.out.print("Ingrese X: ");
+        x = sc.nextDouble();
+
+        System.out.print("Ingrese Y: ");
+        y = sc.nextDouble();
+
+        if (x > 0 && y > 0) {
+            System.out.println("Primer cuadrante");
+        } else if (x < 0 && y > 0) {
+            System.out.println("Segundo cuadrante");
+        } else if (x < 0 && y < 0) {
+            System.out.println("Tercer cuadrante");
+        } else if (x > 0 && y < 0) {
+            System.out.println("Cuarto cuadrante");
+        } else if (x == 0 && y == 0) {
+            System.out.println("Origen");
+        } else if (x == 0) {
+            System.out.println("Sobre el eje Y");
+        } else {
+            System.out.println("Sobre el eje X");
+        }
+    }
+}
